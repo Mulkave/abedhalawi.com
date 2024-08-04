@@ -1,0 +1,36 @@
+<!-- Custom <head> tags (e.g. analytics code) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+    href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap"
+    rel="stylesheet"
+/>
+<link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Fragment+Mono:ital@0;1&family=Major+Mono+Display&display=swap"
+    rel="stylesheet"
+/>
+
+<!-- The following script is for easing in gallery images -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const galleryItems = document.querySelectorAll(".gallery-item img");
+
+        const observer = new IntersectionObserver(
+            (entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0.1, // Adjust as needed
+            },
+        );
+
+        galleryItems.forEach((item) => {
+            observer.observe(item);
+        });
+    });
+</script>

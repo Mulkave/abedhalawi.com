@@ -1,0 +1,69 @@
+:root {
+    --surface-1-light: #ffffff;
+    --surface-2-light: #dee2e6;
+    --text-1-light: #030507;
+    --text-2-light: #868e96;
+    --surface-1-dark: #16191d;
+    --surface-2-dark: #495057;
+    --text-1-dark: #f8f9fa;
+    --text-2-dark: #868e96;
+}
+
+:root {
+    --img-border-radius: 0.1rem;
+}
+
+body {
+    font-family: "DM Mono", monospace;
+    font-weight: 200;
+    font-style: light;
+}
+
+#header-social {
+    margin-left: auto;
+}
+
+header a.btn {
+    font-family: "Major Mono Display", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body > header a.btn {
+    font-size: 1.5rem;
+}
+
+body > menu {
+    font-weight: 400;
+}
+
+.featured-card {
+    margin: 0 auto;
+    border-radius: var(--img-border-radius);
+    width: 100%;
+    aspect-ratio: 3 / 2;
+}
+
+.card {
+    border-radius: var(--img-border-radius);
+    & > img {
+        border-radius: var(--img-border-radius);
+    }
+}
+
+.gallery-item {
+    img {
+        opacity: 0;
+        transition: opacity 1s ease;
+        border-radius: var(--img-border-radius);
+    }
+}
+
+.gallery-item img.visible {
+    opacity: 1;
+}
+
+/* Disable download button in lightbox */
+.pswp__button--download-button {
+    display: none;
+}

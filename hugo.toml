@@ -1,0 +1,44 @@
+baseURL = 'https://abedhalawi.com/'
+languageCode = 'en-us'
+title = 'Abed Halawi'
+disableKinds = ["taxonomy", "term"]
+enableRobotsTXT = true
+timeZone = "Europe/Amsterdam"
+timeout = "120s"
+copyright = "images and text © 2024 Abed Halawi >"
+
+[module]
+[[module.imports]]
+path = "github.com/nicokaiser/hugo-theme-gallery/v4"
+
+[params]
+defaultTheme = "light"
+title = "Abed Halawi's Photography"
+[params.socialIcons]
+instagram = "https://www.instagram.com/mulkave"
+email = "mailto:photography@abedhalawi.com"
+
+[outputs]
+home = ["HTML", "RSS"]
+page = ["HTML"]
+section = ["HTML"]
+
+[services]
+[services.rss]
+limit = 100
+
+[imaging]
+quality = 100
+resampleFilter = "CatmullRom"
+[imaging.exif]
+disableDate = false
+disableLatLong = true
+includeFields = "Copyright"
+# includeFields = "ImageDescription|Orientation|Copyright|Artist"
+
+
+# [menu]
+# [[menu.footer]]
+# name = "Contact"
+# url = "/contact"
+# weight = 1
