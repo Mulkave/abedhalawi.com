@@ -3,7 +3,6 @@ languageCode = 'en-us'
 title = 'Abed Halawi'
 disableKinds = ["taxonomy", "term"]
 enableRobotsTXT = true
-timeZone = "Europe/Amsterdam"
 timeout = "120s"
 copyright = "images and text © 2024 Abed Halawi"
 
