@@ -5,7 +5,7 @@ disableKinds = ["taxonomy", "term"]
 enableRobotsTXT = true
 timeZone = "Europe/Amsterdam"
 timeout = "120s"
-copyright = "images and text © 2024 Abed Halawi >"
+copyright = "images and text © 2024 Abed Halawi"
 
 [module]
 [[module.imports]]
@@ -16,7 +16,6 @@ defaultTheme = "light"
 title = "Abed Halawi's Photography"
 [params.socialIcons]
 instagram = "https://www.instagram.com/mulkave"
-email = "mailto:photography@abedhalawi.com"
 
 [outputs]
 home = ["HTML", "RSS"]

@@ -1,4 +1,4 @@
----
+<!-- ---
 title: contact
 layout: page
 menu:
@@ -8,3 +8,4 @@ menu:
     weight: 100
 
 ---
+--!>
