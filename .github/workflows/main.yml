@@ -12,10 +12,19 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
-      - name: Publish
-        uses: chabad360/hugo-gh-pages@master
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
         with:
-          githubToken: ${{ secrets.PERSONAL_TOKEN }}
-          branch: public
-          cname: abedhalawi.com
-          hugoVersion: 0.131.0
+          hugo-version: "0.131.0"
+          extended: true
+
+      - name: Build
+        run: hugo --gc --minify --cleanDestinationDir
+
+      - name: Publish
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.PERSONAL_TOKEN }}
+          publish_dir: ./public
