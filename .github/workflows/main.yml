@@ -18,4 +18,4 @@ jobs:
           githubToken: ${{ secrets.PERSONAL_TOKEN }}
           branch: public
           cname: abedhalawi.com
-          hugoVersion: v0.131.0+extended
+          hugoVersion: 0.131.0
