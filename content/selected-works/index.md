@@ -5,8 +5,9 @@ title: selected works
 #type: gallery
 weight: 2
 featured_image: L1010077.jpg
-featured: true
+featured: false
 resources:
 private: true
+draft: true
 
 ---
